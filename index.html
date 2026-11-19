@@ -77,22 +77,21 @@
   }
   @media(prefers-reduced-motion:reduce){.domic-plans .key-face,.domic-plans .mobile-action{transition:none}}
 
-.domic-plans .mock{color:#29352f;font-family:DomicInter,Arial,sans-serif;padding:8px}
-.domic-plans .mock .drop{position:relative;display:grid;gap:8px;justify-items:center;text-align:center;padding:64px 20px;border:1.5px dashed #a39276;border-radius:8px;background:#f4f2ec;cursor:pointer;transition:background .2s,border-color .2s}
-.domic-plans .mock .drop.is-over{background:#ebe5d8;border-color:#73583b}
+.domic-plans .mock{color:#29352f;font-family:DomicInter,Arial,sans-serif;padding:14px 12px 10px}
+.domic-plans .mock h3{margin:0 0 22px;font-size:22px;font-weight:650;letter-spacing:-.02em}
+.domic-plans .mock .row{margin-bottom:16px}.domic-plans .mock .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.domic-plans .mock label{display:block;font-size:13px;font-weight:550;color:#3d463f}
+.domic-plans .mock input:not([type=radio]):not([type=file]),.domic-plans .mock select,.domic-plans .mock textarea{display:block;width:100%;margin-top:7px;border:1px solid #979e96;background:#f8f7f2;border-radius:6px;padding:13px 12px;font:inherit;font-size:15px;color:inherit}
+.domic-plans .mock textarea{resize:vertical}
+.domic-plans .mock fieldset{border:0;margin:4px 0 16px;padding:0}.domic-plans .mock legend{font-size:13px;font-weight:550;color:#3d463f;margin-bottom:8px}
+.domic-plans .mock .ck{display:inline-flex;align-items:center;gap:8px;margin-right:22px;font-weight:400;font-size:15px}.domic-plans .mock .ck input{accent-color:#73583b;width:18px;height:18px}
+.domic-plans .mock .drop{position:relative;display:grid;gap:6px;justify-items:center;text-align:center;margin-bottom:16px;padding:26px 16px;border:1.5px dashed #a39276;border-radius:8px;background:#f4f2ec;cursor:pointer}
 .domic-plans .mock .drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
-.domic-plans .mock .drop svg{margin-bottom:6px}
-.domic-plans .mock .drop b{font-size:20px;font-weight:650;letter-spacing:-.02em}
-.domic-plans .mock .drop span{font-size:15px;color:#5d685f}.domic-plans .mock .drop u{color:#73583b}
-.domic-plans .mock .drop em{font-style:normal;font-size:12px;color:#7a847b}
-.domic-plans .mock .files{list-style:none;margin:14px 0 0;padding:0}
-.domic-plans .mock .files li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 2px;border-bottom:1px solid #d6d2c6;font-size:14px}
-.domic-plans .mock .files li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.domic-plans .mock .files li small{color:#7a847b;margin-left:8px}
-.domic-plans .mock .files button{width:auto;margin:0;padding:4px 0;background:none;color:#73583b;font-size:13px;font-weight:600}
-.domic-plans .mock button[type=submit]{display:block;width:100%;margin-top:16px;border:0;border-radius:7px;padding:15px;background:#73583b;color:#fff;font:inherit;font-size:15px;font-weight:650;cursor:pointer}
-.domic-plans .mock button[type=submit]:disabled{opacity:.45;cursor:not-allowed}
-.domic-plans .mock .ok{display:none;margin-top:14px;font-size:14px;color:#3d5a3f;text-align:center}.domic-plans .mock.sent .ok{display:block}
+.domic-plans .mock .drop b{font-size:15px;color:#29352f}.domic-plans .mock .drop span{font-weight:400;font-size:14px;color:#5d685f}.domic-plans .mock .drop u{color:#73583b}.domic-plans .mock .drop em{font-style:normal;font-size:12px;color:#7a847b}
+.domic-plans .mock button{width:100%;border:0;border-radius:7px;padding:15px;background:#73583b;color:#fff;font:inherit;font-size:15px;font-weight:650;cursor:pointer}
+.domic-plans .mock button:hover{background:#5f4830}
+.domic-plans .mock .ok{display:none;margin-top:14px;font-size:14px;color:#3d5a3f}.domic-plans .mock.sent .ok{display:block}
+@media(max-width:600px){.domic-plans .mock .two{grid-template-columns:1fr}}
 @media(max-width:850px){body{padding-top:52px}.pv-bar{top:8px}}
 .pv-bar{position:fixed;z-index:50;top:14px;left:50%;transform:translateX(-50%);display:flex;gap:4px;padding:4px;border:1px solid #3a433d;border-radius:999px;background:rgba(22,27,25,.85);backdrop-filter:blur(10px);font:600 12px DomicInter,Arial,sans-serif}
 .pv-bar button{border:0;border-radius:999px;padding:7px 14px;background:none;color:#b9c0b9;font:inherit;cursor:pointer}.pv-bar button[aria-pressed=true]{background:#d5c5ae;color:#161b19}
@@ -126,7 +125,7 @@
     <div class="wrap">
       <div class="upload-copy">
         <h2 id="dp-upload">Upload your plans.</h2>
-        <p>Attach your plans and send them. Our team will review them and get back to you.</p>
+        <p>Tell us a little about your project and attach your files. We'll review them and get back to you personally.</p>
         <ul class="accepted">
           <li>Architectural floor plans</li>
           <li>Electrical or lighting layouts</li>
@@ -136,11 +135,16 @@
         <small class="note">Your plans are only used to prepare your proposal and are never shared outside our team.</small>
       </div>
       <div class="form-card">
-        <form class="mock" data-rm="Remove" novalidate>
-<label class="drop"><input type="file" multiple accept=".pdf,.dwg,.jpg,.jpeg,.png"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#73583b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg><b>Upload your plans</b><span>Drag your files here or <u>browse</u></span><em>PDF, DWG, JPG or PNG</em></label>
-<ul class="files"></ul>
-<button type="submit" disabled>Send plans</button>
-<p class="ok" role="status">Thank you. Your plans are on their way to our team.</p>
+        <form class="mock" onsubmit="event.preventDefault();this.classList.add('sent')">
+<h3>Tell us about your project</h3>
+<div class="row"><label>Full name<input></label></div>
+<div class="row two"><label>Email<input type="email"></label><label>Phone<input type="tel"></label></div>
+<div class="row two"><label>Project location<input></label><label>Project type<select><option>Residential</option><option>Corporate</option><option>Multi-residential</option></select></label></div>
+<fieldset><legend>Are you working with an architect or designer?</legend><label class="ck"><input type="radio" name="aen">Yes</label><label class="ck"><input type="radio" name="aen">No</label></fieldset>
+<label class="drop"><input type="file" multiple accept=".pdf,.dwg,.jpg,.jpeg,.png" onchange="this.parentNode.querySelector('em').textContent=[...this.files].map(f=>f.name).join(', ')||'PDF, DWG, JPG or PNG'"><b>Upload your plans</b><span>Drag your files here or <u>browse</u></span><em>PDF, DWG, JPG or PNG</em></label>
+<div class="row"><label>Comments (optional)<textarea rows="3"></textarea></label></div>
+<button type="submit">Send my plans</button>
+<p class="ok">Thank you. Your plans are on their way to our team.</p>
 </form>
       </div>
     </div>
@@ -181,7 +185,7 @@
     <div class="wrap">
       <div class="upload-copy">
         <h2 id="es-dp-upload">Sube tus planos.</h2>
-        <p>Adjunta tus planos y envíalos. Nuestro equipo los revisará y te contactará.</p>
+        <p>Cuéntanos un poco sobre tu proyecto y adjunta tus archivos. Los revisamos y te contactamos personalmente.</p>
         <ul class="accepted">
           <li>Planos de arquitectura</li>
           <li>Planos eléctricos o de iluminación</li>
@@ -191,11 +195,16 @@
         <small class="note">Tus planos se usan solo para preparar tu propuesta y nunca se comparten fuera de nuestro equipo.</small>
       </div>
       <div class="form-card">
-        <form class="mock" data-rm="Quitar" novalidate>
-<label class="drop"><input type="file" multiple accept=".pdf,.dwg,.jpg,.jpeg,.png"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#73583b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg><b>Sube tus planos</b><span>Arrastra tus archivos aquí o <u>búscalos</u></span><em>PDF, DWG, JPG o PNG</em></label>
-<ul class="files"></ul>
-<button type="submit" disabled>Enviar planos</button>
-<p class="ok" role="status">Gracias. Tus planos ya están en camino a nuestro equipo.</p>
+        <form class="mock" onsubmit="event.preventDefault();this.classList.add('sent')">
+<h3>Cuéntanos sobre tu proyecto</h3>
+<div class="row"><label>Nombre completo<input></label></div>
+<div class="row two"><label>Email<input type="email"></label><label>Teléfono<input type="tel"></label></div>
+<div class="row two"><label>Ubicación del proyecto<input></label><label>Tipo de proyecto<select><option>Residencial</option><option>Corporativo</option><option>Multifamiliar</option></select></label></div>
+<fieldset><legend>¿Trabajas con un arquitecto o diseñador?</legend><label class="ck"><input type="radio" name="aes">Sí</label><label class="ck"><input type="radio" name="aes">No</label></fieldset>
+<label class="drop"><input type="file" multiple accept=".pdf,.dwg,.jpg,.jpeg,.png" onchange="this.parentNode.querySelector('em').textContent=[...this.files].map(f=>f.name).join(', ')||'PDF, DWG, JPG o PNG'"><b>Sube tus planos</b><span>Arrastra tus archivos aquí o <u>búscalos</u></span><em>PDF, DWG, JPG o PNG</em></label>
+<div class="row"><label>Comentarios (opcional)<textarea rows="3"></textarea></label></div>
+<button type="submit">Enviar mis planos</button>
+<p class="ok">Gracias. Tus planos ya están en camino a nuestro equipo.</p>
 </form>
       </div>
     </div>
@@ -227,11 +236,4 @@
 </script>
 <script>document.querySelectorAll('.pv-bar button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pv-bar button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelectorAll('[data-lang-page]').forEach(p=>p.hidden=p.dataset.langPage!==b.dataset.l);document.documentElement.lang=b.dataset.l;scrollTo(0,0)});
 const q=new URLSearchParams(location.search).get('lang');if(q==='es')document.querySelector('.pv-bar [data-l=es]').click();</script>
-<script>document.querySelectorAll('.mock').forEach(f=>{const inp=f.querySelector('input[type=file]'),drop=f.querySelector('.drop'),list=f.querySelector('.files'),btn=f.querySelector('[type=submit]');let files=[];
-const kb=n=>n>1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.round(n/1024))+' KB';
-const render=()=>{list.replaceChildren(...files.map((x,i)=>{const li=document.createElement('li'),s=document.createElement('span'),sm=document.createElement('small'),r=document.createElement('button');s.textContent=x.name;sm.textContent=kb(x.size);s.append(sm);r.type='button';r.textContent=f.dataset.rm;r.onclick=()=>{files.splice(i,1);render()};li.append(s,r);return li}));btn.disabled=!files.length;f.classList.remove('sent')};
-inp.onchange=()=>{files.push(...inp.files);inp.value='';render()};
-['dragenter','dragover'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.add('is-over')}));
-['dragleave','drop'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.remove('is-over')}));
-drop.addEventListener('drop',ev=>{files.push(...ev.dataTransfer.files);render()});
-f.onsubmit=e=>{e.preventDefault();if(!files.length)return;files=[];render();f.classList.add('sent')}});</script></body></html>
+</body></html>
