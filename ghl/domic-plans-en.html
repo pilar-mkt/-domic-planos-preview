@@ -1,0 +1,163 @@
+<!-- DOMIC · Plans upload · EN · paste into a GHL Custom Code element -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet">
+
+<style>
+  .domic-plans,.domic-plans *{box-sizing:border-box}
+  .domic-plans{--night:#161b19;--chalk:#f0eee8;--quiet:#b9c0b9;--line:#3a433d;--sand:#d5c5ae;
+    width:100vw!important;max-width:none!important;margin-left:calc(50% - 50vw)!important;margin-top:-40px!important;margin-bottom:-40px!important;
+    overflow:clip;background:radial-gradient(ellipse 900px 700px at 88% -120px,rgba(214,173,105,.09),transparent 70%) no-repeat,var(--night);color:var(--chalk);font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .domic-plans :where(h1,h2,h3,p,ol,ul){margin:0;padding:0}
+  .domic-plans a{color:inherit}
+  .domic-plans ::selection{background:var(--sand);color:var(--night)}
+  .domic-plans :where(a,button):focus-visible{outline:2px solid #f1ca91;outline-offset:5px}
+  .domic-plans .wrap{max-width:1280px;margin:0 auto;padding:0 clamp(24px,6vw,96px)}
+
+  /* Bronze key button */
+  .domic-plans .primary{position:relative;display:inline-flex;align-items:stretch;min-height:64px;min-width:280px;padding:4px 4px 8px;border:1px solid #8e7659;border-radius:9px;background:linear-gradient(112deg,#424239 0%,#26312b 44%,#18211d 100%);color:#fff8e9;text-decoration:none;font-size:15px;font-weight:650;line-height:1.2;box-shadow:inset 0 1px 0 rgba(238,227,205,.5),inset 0 -1px 0 #080e0a,0 2px 4px rgba(0,0,0,.65),0 13px 27px rgba(0,0,0,.42)}
+  .domic-plans .key-face{position:relative;display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;padding:10px 22px;border-radius:7px;background:linear-gradient(112deg,#806347 0%,#644b34 35%,#382d22 78%,#665039 100%);box-shadow:inset 0 1px 0 #d2b68c,inset 1px 0 0 #b59a73,inset -1px 0 0 #4c3824,inset 0 -1px 0 #483424,0 1px 0 #987547,0 2px 0 #805f38,0 3px 0 #6b4c2b,0 4px 0 #51361e,0 5px 3px rgba(3,9,5,.65);transition:transform .2s ease}
+  .domic-plans .key-face span{white-space:nowrap;text-shadow:0 1px 1px rgba(0,0,0,.35)}
+  .domic-plans .primary:hover .key-face,.domic-plans .primary:focus-visible .key-face{transform:translateY(-3px)}
+  .domic-plans .primary:active .key-face{transform:translateY(2px)}
+
+  /* Header */
+  .domic-plans .masthead{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:clamp(24px,3.5vw,48px);padding-bottom:clamp(24px,3.5vw,48px)}
+  .domic-plans .logo{display:block;width:88px;flex:none}
+  .domic-plans .logo svg{display:block;width:100%;height:auto}
+  .domic-plans .masthead-note{font-size:13px;color:var(--quiet)}
+
+  /* Hero */
+  .domic-plans .hero{padding-top:clamp(80px,12vw,180px);padding-bottom:clamp(90px,12vw,170px)}
+  .domic-plans .eyebrow{font-size:14px;font-weight:600;color:var(--sand);margin-bottom:24px}
+  .domic-plans h1{max-width:900px;font-size:clamp(52px,7vw,104px);font-weight:570;letter-spacing:-.045em;line-height:.98;text-wrap:balance}
+  .domic-plans .lead{max-width:580px;margin-top:30px;color:#dcdcd5;font-size:clamp(17px,1.4vw,20px);line-height:1.55;text-wrap:pretty}
+  .domic-plans .hero .primary{margin-top:40px}
+
+  /* Steps */
+  .domic-plans .steps{border-top:1px solid var(--line)}
+  .domic-plans .steps ol{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .domic-plans .steps li{padding:clamp(40px,5vw,64px) clamp(20px,3vw,40px) clamp(48px,6vw,80px) 0}
+  .domic-plans .steps li+li{padding-left:clamp(20px,3vw,40px);border-left:1px solid var(--line)}
+  .domic-plans .steps span{display:block;color:var(--sand);font-size:13px;font-weight:600;letter-spacing:.04em}
+  .domic-plans .steps h2{margin-top:20px;font-size:clamp(22px,2vw,28px);font-weight:570;letter-spacing:-.03em;line-height:1.15}
+  .domic-plans .steps p{margin-top:12px;color:var(--quiet);font-size:15px;line-height:1.6}
+
+  /* Upload */
+  .domic-plans .upload{border-top:1px solid var(--line);scroll-margin-top:0}
+  .domic-plans .upload .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,1fr);gap:clamp(40px,7vw,110px);align-items:start;padding-top:clamp(80px,9vw,130px);padding-bottom:clamp(80px,9vw,130px)}
+  .domic-plans .upload h2{font-size:clamp(44px,5vw,72px);font-weight:570;letter-spacing:-.04em;line-height:1}
+  .domic-plans .upload-copy>p{max-width:460px;margin-top:24px;color:var(--quiet);font-size:17px;line-height:1.6}
+  .domic-plans .accepted{list-style:none;margin-top:40px;max-width:460px;border-top:1px solid var(--line)}
+  .domic-plans .accepted li{padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;color:#dcdcd5}
+  .domic-plans .note{display:block;max-width:460px;margin-top:22px;color:#8d978f;font-size:12px;line-height:1.5}
+  .domic-plans .form-card{padding:clamp(14px,2vw,26px);border-radius:10px;background:#eeece5}
+  .domic-plans .form-card iframe{display:block;width:100%;min-height:760px;border:0;background:#eeece5}
+
+  .domic-plans footer{border-top:1px solid var(--line)}
+  .domic-plans footer .wrap{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px;color:#8d978f;font-size:12px}
+  .domic-plans footer a{text-decoration:none}
+  .domic-plans footer a:hover{color:var(--sand)}
+  .domic-plans .mobile-action{display:none}
+
+  @media(max-width:850px){
+    .domic-plans .logo{width:76px}
+    .domic-plans .masthead-note{font-size:12px;text-align:right;max-width:150px}
+    .domic-plans .hero{padding-top:64px;padding-bottom:80px}
+    .domic-plans h1{font-size:clamp(44px,12vw,68px)}
+    .domic-plans .lead{margin-top:22px;font-size:16px}
+    .domic-plans .hero .primary{margin-top:32px;width:100%;min-width:0}
+    .domic-plans .steps ol{grid-template-columns:1fr}
+    .domic-plans .steps li,.domic-plans .steps li+li{padding:36px 0;border-left:0}
+    .domic-plans .steps li+li{border-top:1px solid var(--line)}
+    .domic-plans .upload .wrap{display:block;padding-top:72px;padding-bottom:88px}
+    .domic-plans .form-card{margin-top:44px;padding:10px}
+    .domic-plans .form-card iframe{min-height:820px}
+    .domic-plans footer .wrap{padding-bottom:94px}
+    .domic-plans .mobile-action{position:fixed;z-index:10;inset:auto 0 0;display:block;padding:8px 16px max(8px,env(safe-area-inset-bottom));background:#171c19;border-top:1px solid #3a433d;transform:translateY(120%);transition:transform .33s cubic-bezier(.2,.8,.2,1)}
+    .domic-plans .mobile-action.is-visible{transform:translateY(0)}
+    .domic-plans .mobile-action .primary{width:100%;min-width:0;min-height:50px;padding:3px 3px 6px}
+    .domic-plans .mobile-action .key-face{min-height:45px;padding:8px 18px}
+  }
+  @media(prefers-reduced-motion:reduce){.domic-plans .key-face,.domic-plans .mobile-action{transition:none}}
+</style>
+
+<main class="domic-plans" lang="en">
+  <header class="wrap masthead">
+    <a class="logo" href="https://domicexperiences.com/en/" aria-label="DOMIC Experiences"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.36 48.39"> <defs> <clipPath id="clippath"> <rect x="11.58" y="33.57" width="64.74" height="8.74" fill="none"></rect> </clipPath> <clipPath id="clippath-1"> <rect x="11.73" y="20.38" width="65.63" height="13.78" fill="none"></rect> </clipPath> </defs> <g clip-path="url(#clippath)" id="experiences"> <path d="M17.78,34.89c-.04.27.1.63-.11.84h-3.81v1.82h3.63c-.04.27.1.63-.11.84h-3.53v1.96h3.91v.84h-4.75v-6.29h4.75Z" fill="#fff"></path> <path d="M23.86,34.89l-2.17,3.04,2.24,3.25h-1.12l-1.78-2.52-1.75,2.52h-1.08l2.29-3.26-2.08-3.03h1.08l1.61,2.31,1.75-2.31h1.01Z" fill="#fff"></path> <path d="M25.47,38.67v2.52h-.84v-6.29h3.53c.11,0,.69.29.8.39.81.72.77,2.52-.18,3.09-.08.05-.7.29-.76.29h-2.55ZM25.47,37.83h1.99c.09,0,.7-.18.8-.25.41-.27.48-1.08.2-1.45-.11-.15-.63-.39-.79-.39h-2.2v2.1h0Z" fill="#fff"></path> <path d="M35.18,34.89v.84h-3.91v1.82h3.63v.84h-3.63v1.96h3.91v.84h-4.75v-6.29h4.75Z" fill="#fff"></path> <path d="M40.17,34.89c.57.1,1.12.83,1.2,1.38.13.84-.2,1.39-.82,1.9,1.17.49.51,2.07.98,3h-1.05c-.17-.57.08-2.01-.37-2.42-.04-.04-.48-.23-.5-.23h-2.55v2.65h-.98v-6.29h4.09ZM36.99,37.69h2.34c.05,0,.64-.16.71-.2.76-.36.58-1.55-.39-1.73-.51-.1-.89-.03-1.36-.03-.43,0-.86-.01-1.3,0v1.96Z" fill="#fff"></path> <path d="M43.49,34.89v6.29c-.29-.04-.69.11-.91-.11v-6.18h.91Z" fill="#fff"></path> <path d="M49.64,34.89c-.04.27.1.63-.11.84h-3.81v1.82h3.63c-.04.27.1.63-.11.84h-3.53v1.96h3.91v.84h-4.75v-6.29h4.75Z" fill="#fff"></path> <path d="M55.44,39.99v-5.1h.91v6.29h-1.26c-1.1-1.78-2.28-3.52-3.56-5.17v5.17h-.91v-6.29h1.22l3.6,5.1h0Z" fill="#fff"></path> <path d="M63.48,37.2h-.9c-.31-2.04-3.46-2.14-4.17-.35-.24.62-.25,1.52-.06,2.15.64,2.08,4.03,1.92,4.29-.33h.9c-.14,1.49-1.18,2.53-2.69,2.65-5.14.41-4.56-7.83.61-6.48,1.17.31,1.89,1.15,2.01,2.36h0Z" fill="#fff"></path> <path d="M69.2,34.89v.84h-3.84v1.82h3.56v.84h-3.56v1.96h3.84v.84h-4.75v-6.29h4.75Z" fill="#fff"></path> <path d="M75,36.71l-.84.04c-.12-.15-.1-.35-.18-.52-.47-1-2.94-.77-2.95.23,0,.51.36.69.77.82,1.2.39,3.3.2,3.41,1.9.12,1.9-1.78,2.29-3.3,2.11-1.2-.14-2.08-1.14-1.94-2.36l.84.03c.09.22.1.42.19.65.64,1.48,3.89.9,3.23-.58-.13-.29-.54-.42-.83-.5-1.04-.26-3-.18-3.27-1.55-.55-2.9,4.94-3.17,4.86-.28Z" fill="#fff"></path> </g> <g clip-path="url(#clippath-1)"> <g id="domic"> <path d="M13.17,21.48c1.2,0,2.4.01,3.6,0,3.46-.02,7.09-.16,8.12,4.04.76,3.11-1.33,6.93-4.77,6.93h-6.85l-.11-.11v-10.87h0ZM16.17,30.14h2.55c.52,0,1.67-.38,2.12-.67,1.25-.8,1.46-2.64.95-3.94-.84-2.12-3.76-1.88-5.62-1.82v6.43h0Z" fill="#fff"></path> <path d="M31.6,21.29c3.17-.28,6.9.73,7.67,4.24,1.22,5.61-4.19,8.25-8.98,6.88-6.16-1.76-5.19-10.55,1.31-11.12ZM32.23,23.59c-3.77.39-3.98,5.88-.41,6.72,2.12.5,4.31-.63,4.47-2.93.19-2.6-1.54-4.05-4.07-3.79Z" fill="#fff"></path> <path d="M44.37,21.48l3.67,7.62,3.63-7.62h3.7v10.87l-.11.1h-2.69v-6.92l-3.39,6.92-2.33-.08-2.46-5.51v5.59h-3.35v-10.97h3.32Z" fill="#fff"></path> <path d="M60.82,21.48v10.97h-2.76l-.1-.1v-10.87h2.86Z" fill="#fff"></path> <path d="M75.49,25.6h-2.97c-.15-.18-.17-.42-.28-.63-.85-1.62-3.65-1.72-5.07-.87-2,1.19-1.95,4.84.18,5.9,1.7.84,4.89.49,5.13-1.81h3.07c-.35,4.04-5.21,5.13-8.54,4.31-6.27-1.54-5.89-10.31,1.04-11.22,2.98-.39,7.21.79,7.43,4.32Z" fill="#fff"></path> </g> </g> <path id="logo-house" d="M42.46,42.2c.07,3.56-6.18,4.32-6.18,4.32-.05.01-.09.02-.14.02l-28.15.1c-1.63,0-3.25-.4-4.63-1.26-.78-.49-1.42-1.09-1.42-1.73,0-1.26-.13-15.39-.19-22.28-.02-2.54,1.09-4.96,3.05-6.57,3.37-2.78,9.04-7.69,12.92-10.48,3.02-2.18,4.48-3.7,7.44-1.44l16.7,13.7s.67,1.19.6,3.56" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3.5"></path> </svg></a>
+    <span class="masthead-note">Home automation &amp; integration</span>
+  </header>
+
+  <section class="hero" aria-labelledby="dp-title">
+    <div class="wrap">
+      <p class="eyebrow">Building or renovating?</p>
+      <h1 id="dp-title">Send us your plans.</h1>
+      <p class="lead">Share your architectural or interior plans and our team will design the right system for lighting, shades, sound, climate and control.</p>
+      <a class="primary" href="#plans"><span class="key-face"><span>Upload your plans</span></span></a>
+    </div>
+  </section>
+
+  <section class="steps" aria-label="How it works">
+    <ol class="wrap">
+      <li><span>01</span><h2>Upload your plans</h2><p>Floor plans, electrical layouts or renders, at whatever stage your project is.</p></li>
+      <li><span>02</span><h2>We review them</h2><p>Our team studies each space and coordinates with your architect or designer.</p></li>
+      <li><span>03</span><h2>Your proposal</h2><p>We come back with a tailored system recommendation and the next steps.</p></li>
+    </ol>
+  </section>
+
+  <section class="upload" id="plans" aria-labelledby="dp-upload">
+    <div class="wrap">
+      <div class="upload-copy">
+        <h2 id="dp-upload">Upload your plans.</h2>
+        <p>Attach your plans and send them. Our team will review them and get back to you.</p>
+        <ul class="accepted">
+          <li>Architectural floor plans</li>
+          <li>Electrical or lighting layouts</li>
+          <li>Interior drawings or renders</li>
+          <li>PDF, DWG, JPG or PNG</li>
+        </ul>
+        <small class="note">Your plans are only used to prepare your proposal and are never shared outside our team.</small>
+      </div>
+      <div class="form-card">
+        <!-- GHL form embed: replace FORM_ID_EN with the form ID (Sites > Forms > Integrate) -->
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/FORM_ID_EN"
+          id="inline-FORM_ID_EN"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-activation-type="alwaysActivated"
+          data-deactivation-type="neverDeactivate"
+          data-form-name="DOMIC Plans upload EN"
+          data-layout-iframe-id="inline-FORM_ID_EN"
+          data-form-id="FORM_ID_EN"
+          title="Upload your plans."></iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>DOMIC Experiences</span>
+      <a href="https://domicexperiences.com/en/">domicexperiences.com</a>
+    </div>
+  </footer>
+
+  <div class="mobile-action" aria-hidden="true"><a class="primary" href="#plans" tabindex="-1"><span class="key-face"><span>Upload your plans</span></span></a></div>
+</main>
+
+<script>
+(()=>{
+  const root=document.querySelector('.domic-plans');if(!root)return;
+  root.querySelectorAll('a[href="#plans"]').forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault();
+    root.querySelector('#plans').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+  }));
+  const bar=root.querySelector('.mobile-action');
+  if(!('IntersectionObserver' in window))return;
+  let heroVisible=true,uploadVisible=false;
+  const update=()=>{const v=!heroVisible&&!uploadVisible;bar.classList.toggle('is-visible',v);bar.setAttribute('aria-hidden',String(!v));bar.querySelector('a').tabIndex=v?0:-1};
+  new IntersectionObserver(([e])=>{heroVisible=e.isIntersecting;update()},{threshold:0.15}).observe(root.querySelector('.hero .primary'));
+  new IntersectionObserver(([e])=>{uploadVisible=e.isIntersecting;update()},{threshold:0}).observe(root.querySelector('#plans'));
+})();
+</script>
