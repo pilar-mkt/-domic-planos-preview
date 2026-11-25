@@ -24,7 +24,7 @@
   .domic-plans .masthead-note{font-size:13px;color:var(--quiet)}
 
   /* Hero */
-  .domic-plans .hero{padding-top:clamp(80px,12vw,180px);padding-bottom:clamp(90px,12vw,170px)}
+  .domic-plans .hero{padding-top:clamp(24px,4vh,64px);padding-bottom:clamp(72px,9vw,130px)}
   .domic-plans .eyebrow{font-size:14px;font-weight:600;color:var(--sand);margin-bottom:24px}
   .domic-plans h1{max-width:900px;font-size:clamp(52px,7vw,104px);font-weight:570;letter-spacing:-.045em;line-height:.98;text-wrap:balance}
   .domic-plans .lead{max-width:580px;margin-top:30px;color:#dcdcd5;font-size:clamp(17px,1.4vw,20px);line-height:1.55;text-wrap:pretty}
@@ -59,7 +59,7 @@
   @media(max-width:850px){
     .domic-plans .logo{width:76px}
     .domic-plans .masthead-note{font-size:12px;text-align:right;max-width:150px}
-    .domic-plans .hero{padding-top:64px;padding-bottom:80px}
+    .domic-plans .hero{padding-top:28px;padding-bottom:72px}
     .domic-plans h1{font-size:clamp(44px,12vw,68px)}
     .domic-plans .lead{margin-top:22px;font-size:16px}
     .domic-plans .hero .primary{margin-top:32px;width:100%;min-width:0}
@@ -139,7 +139,7 @@
 <h3>Tell us about your project</h3>
 <div class="row"><label>Full name<input></label></div>
 <div class="row two"><label>Email<input type="email"></label><label>Phone<input type="tel"></label></div>
-<div class="row two"><label>Project location<input></label><label>Project type<select><option>Residential</option><option>Corporate</option><option>Multi-residential</option></select></label></div>
+<div class="row two"><label>Project location<input></label><label>Project type<select><option>Residential</option><option>Commercial</option><option>Multi-residential</option></select></label></div>
 <fieldset><legend>Are you working with an architect or designer?</legend><label class="ck"><input type="radio" name="aen">Yes</label><label class="ck"><input type="radio" name="aen">No</label></fieldset>
 <label class="drop"><input type="file" multiple accept=".pdf,.dwg,.jpg,.jpeg,.png" onchange="this.parentNode.querySelector('em').textContent=[...this.files].map(f=>f.name).join(', ')||'PDF, DWG, JPG or PNG'"><b>Upload your plans</b><span>Drag your files here or <u>browse</u></span><em>PDF, DWG, JPG or PNG</em></label>
 <div class="row"><label>Comments (optional)<textarea rows="3"></textarea></label></div>
@@ -199,7 +199,7 @@
 <h3>Cuéntanos sobre tu proyecto</h3>
 <div class="row"><label>Nombre completo<input></label></div>
 <div class="row two"><label>Email<input type="email"></label><label>Teléfono<input type="tel"></label></div>
-<div class="row two"><label>Ubicación del proyecto<input></label><label>Tipo de proyecto<select><option>Residencial</option><option>Corporativo</option><option>Multifamiliar</option></select></label></div>
+<div class="row two"><label>Ubicación del proyecto<input></label><label>Tipo de proyecto<select><option>Residencial</option><option>Comercial</option><option>Multifamiliar</option></select></label></div>
 <fieldset><legend>¿Trabajas con un arquitecto o diseñador?</legend><label class="ck"><input type="radio" name="aes">Sí</label><label class="ck"><input type="radio" name="aes">No</label></fieldset>
 <label class="drop"><input type="file" multiple accept=".pdf,.dwg,.jpg,.jpeg,.png" onchange="this.parentNode.querySelector('em').textContent=[...this.files].map(f=>f.name).join(', ')||'PDF, DWG, JPG o PNG'"><b>Sube tus planos</b><span>Arrastra tus archivos aquí o <u>búscalos</u></span><em>PDF, DWG, JPG o PNG</em></label>
 <div class="row"><label>Comentarios (opcional)<textarea rows="3"></textarea></label></div>

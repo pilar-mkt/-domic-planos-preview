@@ -12,7 +12,7 @@ Landing minimalista para que los clientes de DOMIC suban sus planos y estos lleg
 
 ## Configuración en GoHighLevel
 
-1. **Formulario por idioma** (Sites > Forms): uno en inglés y otro en español, con nombre, email, teléfono, ubicación del proyecto, tipo de proyecto, ¿trabaja con arquitecto?, un campo **File Upload** (varios archivos, PDF, DWG, JPG, PNG) y comentarios. Estilo sugerido: fondo `#eeece5`, botón `#73583b` con texto blanco.
+1. **Formulario por idioma** (Sites > Forms): uno en inglés y otro en español, con nombre, email, teléfono, ubicación del proyecto, tipo de proyecto (Residential / Commercial / Multi-residential; en español Residencial / Comercial / Multifamiliar), ¿trabaja con arquitecto?, un campo **File Upload** (varios archivos, PDF, DWG, JPG, PNG) y comentarios. Estilo sugerido: fondo `#eeece5`, botón `#73583b` con texto blanco.
 2. **Embed**: en *Integrate*, copiar el ID del formulario y reemplazar `FORM_ID_EN` o `FORM_ID_ES` en el archivo correspondiente (aparece 4 veces).
 3. **Workflow**: disparador *Form Submitted* (los dos formularios) y acción *Send Internal Notification > Email* al mail de DOMIC, incluyendo el campo de archivos.
 
